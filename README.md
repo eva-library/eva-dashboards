@@ -234,8 +234,14 @@ Screenshot
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: table session</li>
-
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
 </ul>
 </td>
 <td>
