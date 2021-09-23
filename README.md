@@ -149,7 +149,57 @@ Screenshot
 
 ### **B. Average conversations per period**
 
-![](https://i.ibb.co/LJ5vgks/Captura-de-Pantalla-2021-09-23-a-la-s-20-10-58.png) 
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/LJ5vgks/Captura-de-Pantalla-2021-09-23-a-la-s-20-10-58.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: table session</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: botId</li>
+<li><b>Default date range</b>: Auto</li>
+<li><b>Filter</b>: Create filter with the following parameters.</li>
+<li>Include</li>
+<li>botId</li>
+<li>Equal to (=)</li>
+<li><b>value</b>: botId</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/fqt4210/Captura-de-Pantalla-2021-09-23-a-la-s-20-22-55.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
+### **C. Conversation ended in human transshipment**
 
 <table>
 <tr>
