@@ -200,6 +200,50 @@ Screenshot
 </table>
 
 ### **C. Conversation ended in human transshipment**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: table session</li>
+
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **D. Total conversations**
 ### **E. Total messages received**
 ### **F. Top Answers**
