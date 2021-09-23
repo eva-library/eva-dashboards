@@ -83,33 +83,60 @@ Data sources use connectors to get data from a specific platform, system, or pro
 ## 2. OVERVIEW
 
 ### **A. conversations**
-| ![](https://i.ibb.co/12s2JfF/Captura-de-Pantalla-2021-09-23-a-la-s-19-16-53.png)   
-| --------  
-| ![](https://i.ibb.co/hcdXy5G/Captura-de-Pantalla-2021-09-23-a-la-s-19-29-53.png)   
-| --------  
+![](https://i.ibb.co/12s2JfF/Captura-de-Pantalla-2021-09-23-a-la-s-19-16-53.png) 
 
-> **Configuration**
 
-> - **Datasource**: table session
-> - **Date Range Dimension**: createDate(date)
-> - **Dimension**: createDate(Month Day)
-> - **Metric**: sessionCode (Conversations per day)
->     - **Aggregation**: Count Distinct
->     - **Type**: Number
->     - **Comparison calculation**: None
->     - **Running calculation**: None
->     - **Running calculation**: None
-sessionCode (Accumulated Conversations)
-Aggregation: Count Distinct
-Comparison calculation: None
-Running calculation: None
-Sort: createDate - Ascending
-Default date range: Auto
-Filter: Create filter with the following parameters.
-Include
-botId
-Equal to (=)
-value: botId
-Interactions:
-check Apply Filter
-check Enable sorting
+<table>
+<tr>
+<th align="center">
+<img width="441" height="1px">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="441" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<ul>
+<li><b>Datasource</b>: table session</li>
+<li><b>Date Range Dimension:</b>: createDate(date)</li>
+<li><b>Dimension</b>: createDate(Month Day)</li>
+<li><b>Metric</b>: sessionCode (Conversations per day)</li>
+<li><b>Aggregation</b>: Count Distinct</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li>sessionCode (Accumulated Conversations)</li>
+<li><b>Aggregation</b>: Count Distinct</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Sort</b>: createDate - Ascending</li>
+<li><b>Default date range</b>: Auto</li>
+<li><b>Filter</b>: Create filter with the following parameters.</li>
+<li>Include</li>
+<li>botId</li>
+<li>Equal to (=)</li>
+<li><b>value</b>: botId</li>
+<li><b>Interactions</b>:</li>
+<li>check Apply Filter</li>
+<li>check Enable sorting</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/hcdXy5G/Captura-de-Pantalla-2021-09-23-a-la-s-19-29-53.png" style="text-center"/></div>
+</td>
+</tr>
+
+
+
+
