@@ -9,7 +9,7 @@ Data Studio is a flexible tool with which the same results can be achieved in se
 Data Studio reports tell stories through data. These stories can be intended to persuade, provide valuable information, validate decisions, or promote change.
 A good report is one in which finding useful information is quick and easy.
 
-**1.1 KEEP CONTENT UP TO DATE**<
+### **1.1 KEEP CONTENT UP TO DATE**<
 
 Report data is cached to improve performance. When all charts in a report are fetched from cache, a lightning bolt icon appears in the lower left corner. 
 Report editors can refresh the cache by clicking the refresh data icon. 
