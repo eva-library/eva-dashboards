@@ -251,27 +251,730 @@ Screenshot
 </table>
 
 ### **D. Total conversations**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="#" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: table session</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: botId</li>
+<li><b>Aggregation</b>: Count</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+<li><b>Filter</b>: Create filter with the following parameters.</li>
+<li>Include</li>
+<li>botId</li>
+<li>Equal to (=)</li>
+<li><b>value</b>: botId</li>    
+</ul>
+</td>
+<td>
+<div align="center"><img src="#" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **E. Total messages received**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select usrint.id,sess.botId,sess.channelId,usrint.createDate,usrint.text,usrint.confidence from alvoradadb.user_interaction usrint, alvoradadb.session sess where usrint.sessionCode = sess.sessionCode and sess.botId=value01</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+Metric: id
+Aggregation: Count
+Type: Number
+Comparison calculation: None
+Running calculation: None
+Default date range: Auto
+
+    
+    
+</ul>
+</td>
+<td>
+<div align="center"><img src="" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **F. Top Answers**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **G. Total messages per users(api calls)**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **H. Total messages per bot**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **I. Not Handle by bot**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
 
 ## 3. USERS
 
 ### **A. Total Users**
 
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 
 ## 4. MESSAGES
 
 ### **A. Total per day**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **B. Total per week**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **C. Total per month**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
 
 ## 5. SATISFACTION SURVEY
 
 ### **A. Insatisfecho**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **B. Neutro**
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ### **C. Satisfecho**
 
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
+
 ## 5. QUESTIONS
+
+<table>
+<tr>
+<th align="center">
+<img width="394" height="1px">
+<p> 
+<small>
+Reference
+</small>
+</p>
+</th>
+<th align="center">
+<img width="294" height="1">
+<p> 
+<small>
+Configuration
+</small>
+</p>
+</th>
+<th align="center">
+<img width="194" height="1">
+<p> 
+<small>
+Screenshot
+</small>
+</p>
+</th>
+</tr>
+<tr>
+<td>
+<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+</td>
+<td>
+<ul>
+<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Metric</b>: Record count</li>
+<li><b>Aggregation</b>: auto</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
+</ul>
+</td>
+<td>
+<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+</td>
+</tr>
+</table>
