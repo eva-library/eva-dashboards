@@ -963,7 +963,7 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="#" style="text-center"/></div>
+<div align="center"><img src="https://i.ibb.co/hXHLrWC/Captura-de-Pantalla-2021-09-27-a-la-s-15-43-13.png" style="text-center"/></div>
 </td>
 <td>
 <ul>
@@ -981,7 +981,7 @@ where u.sessionCode = s.sessionCode and b.id = s.botId and b.id=value and confid
 </ul>
 </td>
 <td>
-<div align="center"><img src="#" style="text-center"/></div>
+<div align="center"><img src="https://i.ibb.co/Fw38qvt/Captura-de-Pantalla-2021-09-27-a-la-s-15-44-09.png" style="text-center"/></div>
 </td>
 </tr>
 </table>
