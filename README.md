@@ -343,15 +343,12 @@ Screenshot
 <ul>
 <li><b>Datasource</b>: select usrint.id,sess.botId,sess.channelId,usrint.createDate,usrint.text,usrint.confidence from alvoradadb.user_interaction usrint, alvoradadb.session sess where usrint.sessionCode = sess.sessionCode and sess.botId=value01</li>
 <li><b>Date Range Dimension</b>: createDate(date)</li>
-Metric: id
-Aggregation: Count
-Type: Number
-Comparison calculation: None
-Running calculation: None
-Default date range: Auto
-
-    
-    
+<li><b>Metric</b>: id</li>
+<li><b>Aggregation</b>: Count</li>
+<li><b>Type</b>: Number</li>
+<li><b>Comparison calculation</b>: None</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Default date range</b>: Auto</li>
 </ul>
 </td>
 <td>
@@ -391,22 +388,32 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: select an.name,an.description,ui.sessionCode,ui.createDate from alvoradadb.user_interaction ui, alvoradadb.answer an where ui.answerID = an.id and ui.answerId in ('values')</li>
 <li><b>Date Range Dimension</b>: createDate(date)</li>
-<li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
+<li><b>Dimension</b>: </li>
+<li>description</li>
+<li>name</li>
+<li><b>Metric</b>:</li>
+<li>name</li>
+<li><b>Aggregation</b>: Count</li>
 <li><b>Type</b>: Number</li>
 <li><b>Comparison calculation</b>: None</li>
 <li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>description</b>:</li>
+<li><b>Aggregation</b>: Count</li>
+<li><b>Type</b>: Percent</li>
+<li><b>Comparison calculation</b>: Percent of total - Relative to corresponding data</li>
+<li><b>Running calculation</b>: None</li>
+<li><b>Sort</b>: description</li>
+<li><b>Aggregation</b>: Count</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -442,22 +449,21 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: SELECT usrint.id, sess.botId, sess.channelId, usrint.createDate, usrint.text, usrint.confidence FROM alvoradadb.user_interaction usrint, alvoradadb.session sess where usrint.sessionCode = sess.sessionCode and usrint.userSent=1 and sess.botId=value</li>
 <li><b>Date Range Dimension</b>: createDate(date)</li>
-<li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
+<li><b>Metric</b>: id</li>
+<li><b>Aggregation</b>: Count</li>
 <li><b>Type</b>: Number</li>
 <li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Running calculation</b>: None   </li> 
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -493,22 +499,22 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: select ui.* from user_interaction as ui inner join session as s on ui.sessionCode = s.sessionCode where ui.id in (select ui.userSentIdfrom user_interaction as ui inner join session as s on ui.sessionCode = s.sessionCode where ui.answerId in(values) and s.botId = value01) order by ui.createDate desc</li> 
 <li><b>Date Range Dimension</b>: createDate(date)</li>
-<li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
-<li><b>Type</b>: Number</li>
-<li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Dimension: </b></li>
+<li>createDate</li>
+<li><b>Type</b>: Date Hour Minute</li>
+<li><b>text</b>:</li>
+<li><b>Type</b>: Text</li>
+<li><b>Sort</b>: createDate(date)</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -544,22 +550,22 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: select ui.* from user_interaction as ui inner join session as s on ui.sessionCode = s.sessionCode where ui.id in (select ui.userSentIdfrom user_interaction as ui inner join session as s on ui.sessionCode = s.sessionCode where ui.answerId in(values) and s.botId = value01) order by ui.createDate desc</li> 
 <li><b>Date Range Dimension</b>: createDate(date)</li>
-<li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
-<li><b>Type</b>: Number</li>
-<li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Dimension: </b></li>
+<li>createDate</li>
+<li><b>Type</b>: Date Hour Minute</li>
+<li><b>text</b>:</li>
+<li><b>Type</b>: Text</li>
+<li><b>Sort</b>: createDate(date)</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -597,22 +603,27 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: table sessions</li>
 <li><b>Date Range Dimension</b>: createDate(date)</li>
-<li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
+<li><b>Dimension</b>: createDate (Month Day)</li>
+<li><b>Metric</b>: userRef</li>
+<li><b>Aggregation</b>: Count</li>
 <li><b>Type</b>: Number</li>
 <li><b>Comparison calculation</b>: None</li>
 <li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Filter</b>: Create filter with the following parameters.</li>
+<li>Include</li>
+<li>botId</li>
+<li>Equal to (=)</li>
+<li>value: botId</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -651,22 +662,24 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: select b.id, b.name, u.createdate fecha, day(u.createdate) dia, count(*) mensajesEnviados from user_interaction u ,session s , bot b where u.sessionCode = s.sessionCode and b.id = s.botId and u.userSent=1 and b.id =value group by b.id, dia order by b.name, fecha, dia</li>
 <li><b>Date Range Dimension</b>: createDate(date)</li>
-<li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
-<li><b>Type</b>: Number</li>
-<li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Dimension</b>: createDate</li>
+<li><b>Metric:</b></li>
+<li>mensajesEnviados</li>
+<li>Agreggation: Sum</li>
+<li>Type: Number</li>
+<li>Comparison calculation: None</li>
+<li>Running calculation: None</li>
+<li><b>Sort</b>: createDate</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -702,22 +715,24 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: select b.id, b.name, u.createdate fecha, week(u.createdate) semana, count(*) mensajesEnviados from user_interaction u ,session s , bot b where u.sessionCode = s.sessionCode and b.id = s.botId and u.userSent=1 and b.id =value group by b.id, semana order by b.name, fecha, semana</li>
 <li><b>Date Range Dimension</b>: createDate(date)</li>
-<li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
-<li><b>Type</b>: Number</li>
-<li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Dimension</b>: createDate</li>
+<li><b>Metric:</b></li>
+<li>mensajesEnviados</li>
+<li>Agreggation: Sum</li>
+<li>Type: Number</li>
+<li>Comparison calculation: None</li>
+<li>Running calculation: None</li>
+<li><b>Sort</b>: createDate</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -753,22 +768,24 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: select b.id, b.name, u.createdate fecha, month(u.createdate) mes, count(*) mensajesEnviados from user_interaction u ,session s , bot b where u.sessionCode = s.sessionCode and b.id = s.botId and u.userSent=1 and b.id =value group by b.id, mes order by b.name, fecha, mes</li>
 <li><b>Date Range Dimension</b>: createDate(date)</li>
-<li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
-<li><b>Type</b>: Number</li>
-<li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Dimension</b>: createDate</li>
+<li><b>Metric:</b></li>
+<li>mensajesEnviados</li>
+<li>Agreggation: Sum</li>
+<li>Type: Number</li>
+<li>Comparison calculation: None</li>
+<li>Running calculation: None</li>
+<li><b>Sort</b>: createDate</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -806,22 +823,18 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: SELECT stf.sessionCode session,stf.evaluation evaluation,stf.userComments comments,stf.createDate createDate,sess.userRef IP,sess.locale locale FROM alvoradadb.satisfaction stf, alvoradadb.session sess where stf.sessionCode=sess.sessionCode and sess.botId=value01 and sess.channelID=value02</li>
 <li><b>Date Range Dimension</b>: createDate(date)</li>
 <li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
-<li><b>Type</b>: Number</li>
-<li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Filter</b>: evaluation equal 01</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -857,22 +870,18 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
+<li><b>Datasource</b>: SELECT stf.sessionCode session,stf.evaluation evaluation,stf.userComments comments,stf.createDate createDate,sess.userRef IP,sess.locale locale FROM alvoradadb.satisfaction stf, alvoradadb.session sess where stf.sessionCode=sess.sessionCode and sess.botId=value01 and sess.channelID=value02</li>
 <li><b>Date Range Dimension</b>: createDate(date)</li>
 <li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
-<li><b>Type</b>: Number</li>
-<li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Filter</b>: evaluation equal 02</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -908,22 +917,17 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
-<li><b>Date Range Dimension</b>: createDate(date)</li>
+<li><b>Datasource</b>: SELECT stf.sessionCode session,stf.evaluation evaluation,stf.userComments comments,stf.createDate createDate,sess.userRef IP,sess.locale locale FROM alvoradadb.satisfaction stf, alvoradadb.session sess where stf.sessionCode=sess.sessionCode and sess.botId=value01 and sess.channelID=value02</li>
 <li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
-<li><b>Type</b>: Number</li>
-<li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Filter</b>: evaluation equal 03</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 </tr>
 </table>
@@ -959,22 +963,25 @@ Screenshot
 </tr>
 <tr>
 <td>
-<div align="center"><img src="https://i.ibb.co/0sL1yM5/Captura-de-Pantalla-2021-09-23-a-la-s-20-32-32.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 <td>
 <ul>
-<li><b>Datasource</b>: select * from user_interaction where answerId in (select id from answer where name = value01 and botId=value02)</li>
-<li><b>Date Range Dimension</b>: createDate(date)</li>
-<li><b>Metric</b>: Record count</li>
-<li><b>Aggregation</b>: auto</li>
+<li><b>Datasource</b>: select count(*) cantidad, '75% - 100%' tag, createDate from (select text,createDate, avg(confidence) asertiveness from (select text, confidence,u.createDate from user_interaction u ,session s , bot b where u.sessionCode = s.sessionCode and b.id = s.botId and b.id=value and confidence is not null and text is not null) asd group by text order by text desc ) C1 where asertiveness <= 1 and asertiveness > 0.75 union all select count(*) cantidad, '50% - 75%' tag, createDate from (select text,createDate, avg(confidence) asertiveness from (select text, confidence,u.createDate from user_interaction u ,session s , bot b where u.sessionCode = s.sessionCode and b.id = s.botId and b.id=value and confidence is not null and text is not null) asd group by text order by text desc ) C2 where asertiveness <= 0.75 and asertiveness > 0.5 union all
+select count(*) cantidad, '25% - 50%' tag, createDate from (select text,createDate, avg(confidence) asertiveness from (select text, confidence,u.createDate from user_interaction u ,session s , bot b where u.sessionCode = s.sessionCode and b.id = s.botId and b.id=value and confidence is not null and text is not null) asd group by text order by text desc) C3 where asertiveness <= 0.5 and asertiveness > 0.25 union all select count(*) cantidad, ' 0% - 25%' tag, createDate from (select text,createDate, avg(confidence) asertiveness from (select text, confidence,u.createDate from user_interaction u ,session s , bot b
+where u.sessionCode = s.sessionCode and b.id = s.botId and b.id=value and confidence is not null and text is not null) asd group by text order by text desc
+) C4 where asertiveness < = 0.25 and asertiveness > 0
+</li>
+<li><b>Dimension</b>: TAG</li>
 <li><b>Type</b>: Number</li>
-<li><b>Comparison calculation</b>: None</li>
-<li><b>Running calculation</b>: None</li>
-<li><b>Default date range</b>: Auto</li>
+<li><b>Metric</b>: cantidad</li>
+<li><b>Aggregation</b>: Sum</li>
+<li><b>Sort</b>: cantidad</li>  
+<li><b>Aggregation</b>: Sum</li>
 </ul>
 </td>
 <td>
-<div align="center"><img src="https://i.ibb.co/kK4xkZp/Captura-de-Pantalla-2021-09-23-a-la-s-20-33-12.png" style="text-center"/></div>
+<div align="center"><img src="#" style="text-center"/></div>
 </td>
 </tr>
 </table>
